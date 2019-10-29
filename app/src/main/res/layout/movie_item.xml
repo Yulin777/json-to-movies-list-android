@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/shadow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/movie_item_image"
+            android:layout_width="@dimen/movie_item_height"
+            android:layout_height="match_parent"
+            android:src="@android:color/background_dark"
+            android:transitionName="image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/movie_item_height"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/movie_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Dawn of the Planet of the Apes"
+                android:textStyle="bold"
+                android:transitionName="title" />
+
+            <TextView
+                android:id="@+id/movie_item_year"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="2014"
+                android:transitionName="year" />
+
+            <TextView
+                android:id="@+id/movie_item_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Action, Drama, Sci-Fi"
+                android:transitionName="genre" />
+
+            <com.willy.ratingbar.ScaleRatingBar
+                android:id="@+id/movie_item_rating"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:transitionName="rating"
+                app:srb_clearRatingEnabled="true"
+                app:srb_clickable="false"
+                app:srb_drawableEmpty="@drawable/preview_empty_star"
+                app:srb_drawableFilled="@drawable/preview_full_star"
+                app:srb_isIndicator="false"
+                app:srb_minimumStars="0"
+                app:srb_numStars="5"
+                app:srb_rating="4"
+                app:srb_scrollable="false"
+                app:srb_starHeight="20dp"
+                app:srb_starPadding="1dp"
+                app:srb_starWidth="20dp"
+                app:srb_stepSize="0.1" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

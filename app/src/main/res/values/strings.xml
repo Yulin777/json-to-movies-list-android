@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">tingz_ivan_yulin_test</string>
+    <string name="json_url">https://api.androidhive.info/json/movies.json</string>
+</resources>

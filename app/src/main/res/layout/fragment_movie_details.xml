@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.95"
+    android:background="@android:color/white"
+    android:clickable="false"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".Fragments.MovieDetailsFragment">
+
+    <ImageView
+        android:id="@+id/fragment_movie_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/loading_spinner"
+        android:transitionName="image" />
+
+    <TextView
+        android:id="@+id/fragment_movie_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Dawn of the Planet of the Apes"
+        android:textStyle="bold"
+        android:transitionName="title" />
+
+    <TextView
+        android:id="@+id/fragment_movie_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="2014"
+        android:transitionName="year" />
+
+    <TextView
+        android:id="@+id/fragment_movie_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Action, Drama, Sci-Fi"
+        android:transitionName="genre" />
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/fragment_movie_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:transitionName="rating"
+        app:srb_clearRatingEnabled="true"
+        app:srb_clickable="false"
+        app:srb_drawableEmpty="@drawable/preview_empty_star"
+        app:srb_drawableFilled="@drawable/preview_full_star"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="0"
+        app:srb_numStars="5"
+        app:srb_rating="4"
+        app:srb_scrollable="false"
+        app:srb_starHeight="20dp"
+        app:srb_starPadding="1dp"
+        app:srb_starWidth="20dp"
+        app:srb_stepSize="0.1" />
+
+</LinearLayout>
